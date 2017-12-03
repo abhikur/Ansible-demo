@@ -2,3 +2,5 @@
   homebrew:
     name: nodejs
     state: present
+
+- include: npm_modules/main.yml

@@ -4,9 +4,6 @@
     - nodejs
 
   tasks:
-  - name: "Install forever to run Node.js app in background"
-    npm: name=forever global=yes state=present
-
   - name: "Check list of Node.js apps running."
     command: forever list
     register: forever_list
