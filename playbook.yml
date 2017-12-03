@@ -4,4 +4,8 @@
     - name: Print hello world
       command: echo "Hello world"
 
-  
+    - name: Installing nodejs
+      homebrew:
+        name: nodejs
+        state: present
+
