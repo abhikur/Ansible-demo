@@ -1,0 +1,8 @@
+- name: "Check list of Node.js apps running."
+  command: forever list
+  register: forever_list
+  changed_when: false
+
+- name: "Start example Node.js app."
+  command: forever start service/server.js
+  when: "forever_list.stdout.find('service/server.js') == -1"
