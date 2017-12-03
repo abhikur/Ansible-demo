@@ -1,14 +1,9 @@
 - hosts: local
 
+  roles:
+    - nodejs
+
   tasks:
-    - name: Print hello world
-      command: echo "Hello world"
-
-    - name: Installing nodejs
-      homebrew:
-        name: nodejs
-        state: present
-
   - name: "Install forever to run Node.js app in background"
     npm: name=forever global=yes state=present
 

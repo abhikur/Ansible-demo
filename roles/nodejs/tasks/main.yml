@@ -1,0 +1,4 @@
+- name: Installing nodejs
+  homebrew:
+    name: nodejs
+    state: present
