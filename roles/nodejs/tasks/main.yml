@@ -1,6 +1,6 @@
-- name: Installing nodejs
+- name: Installing nodejs {{ node_version }}
   homebrew:
-    name: nodejs
+    name: nodejs-{{ node_version }}
     state: present
 
 - include: npm_modules/main.yml
