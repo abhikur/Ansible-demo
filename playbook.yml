@@ -1,4 +1,6 @@
 - hosts: local
+  vars_files:
+    - ./configs/dev.yml
 
   roles:
     - nodejs
